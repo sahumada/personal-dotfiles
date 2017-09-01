@@ -1,0 +1,12 @@
+[flake8]
+
+max-line-length = 160
+exclude = test/*
+max-complexity = 10
+
+# C901 '*' is too complex
+# E201 whitespace after
+# E202 whitespace before
+# E402 module level import not at top of file
+# E501 line too long
+ignore = C901,E201,E202,E402,E501
