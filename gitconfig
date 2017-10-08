@@ -47,3 +47,11 @@
     enabled = true
 [status]
     showuntrackedfiles = all
+[merge]
+	tool = meld
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
