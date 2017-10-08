@@ -30,7 +30,7 @@ set wildignore=*.o,*~,*.pyc                                " ignore compiled fil
 "set ai " auto indent
 "set si " smart indent
 "set number " show line numbers
-"set wrap " wrap lines
+set nowrap " wrap lines
 
 filetype off
 filetype indent plugin on                                  " auto indent
@@ -57,10 +57,10 @@ autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
 
 " use spaces instead of tabs
-autocmd BufRead,BufNewFile *.c,*.config,*.css,*.h,*.html,*.inc,*.java set expandtab
+autocmd BufRead,BufNewFile *.c,*.config,.coveragerc,*.css,*.h,*.html,*.inc,*.ini,*.java set expandtab
 autocmd BufRead,BufNewFile *.json,*.php,*.pl,*.pm,*.py,*.sh,*.t,*.xml,COMMIT_EDITMSG set expandtab
 
-autocmd FileType gitcommit setlocal spell spelllang=en_us
+autocmd FileType gitcommit setlocal spell spelllang=en_us textwidth=72 colorcolumn=72
 autocmd BufRead,BufNewFile *.py setlocal spell spelllang=en_us
 "autocmd FileType tex setlocal spell spelllang=en_us
 "autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=es
