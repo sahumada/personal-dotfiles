@@ -13,6 +13,7 @@ highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 set autoread                                               " set to auto read when a file is changed from the outside
 set background=dark                                        " use the right colors
 set backspace=indent,eol,start                             " sane backspace
+set clipboard=unnamed
 set colorcolumn=100
 set encoding=utf8                                          " set utf8 as standard encoding and en_US as the standard language
 set history=700                                            " sets how many lines of history VIM has to remember
@@ -40,6 +41,9 @@ nnoremap <silent> <F6> :let _s=@/<Bar>:%s/\r$//e<Bar>:let @/=_s<Bar>:nohl<CR>   
 
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+vnoremap < <gv " better indentation - easy moving of code blocks
+vnoremap > >gv " better indentation - easy moving of code blocks
 
 " with a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
