@@ -1,7 +1,6 @@
 [flake8]
 
 max-line-length = 160
-exclude = test/*
 max-complexity = 10
 
 # C901 '*' is too complex
