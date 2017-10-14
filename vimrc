@@ -64,6 +64,8 @@ autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
+autocmd FileType gitcommit setlocal spell spelllang=en_us textwidth=72 colorcolumn=72
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " use spaces instead of tabs
 autocmd BufRead,BufNewFile *.c,*.config,.coveragerc,*.css,*.h,*.html,*.inc,*.ini,*.java set expandtab
