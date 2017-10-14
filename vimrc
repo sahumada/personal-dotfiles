@@ -50,6 +50,11 @@ vnoremap > >gv " better indentation - easy moving of code blocks
 let mapleader = ","
 let g:mapleader = ","
 
+map <C-t><up> :tabr<cr>
+map <C-t><down> :tabl<cr>
+map <C-t><left> :tabp<cr>
+map <C-t><right> :tabn<cr>
+
 match TrailingWhitespace /\s\+$/
 
 " commenting blocks of code.
