@@ -5,6 +5,8 @@ set t_Co=256                                               " force 256 colors on
 syntax enable                                              " enable syntax highlighting
 
 highlight ColorColumn ctermbg=3 guibg=gray
+highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=NONE " default CursorColumn colors
+highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=NONE   " default CursorLine colors
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 highlight StatusLine ctermfg=15 ctermbg=4 cterm=bold
 highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -85,4 +87,11 @@ autocmd BufRead,BufNewFile *.py setlocal spell spelllang=en_us
 autocmd BufRead,BufNewFile *.qs setfiletype javascript     " associate *.qs with javascript filetype
 
 autocmd TabEnter * :match TrailingWhitespace /\s\+$/
+
+set cursorline
+autocmd InsertEnter * highlight CursorLine cterm=NONE ctermfg=white ctermbg=3
+autocmd InsertLeave * highlight CursorLine ctermfg=NONE ctermbg=NONE
+set cursorcolumn
+autocmd InsertEnter * highlight CursorColumn ctermfg=white ctermbg=3
+autocmd InsertLeave * highlight CursorColumn ctermfg=NONE ctermbg=NONE
 " ~/.vimrc ends here
