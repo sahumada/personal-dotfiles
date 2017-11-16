@@ -1,9 +1,8 @@
 " ~/.vimrc (configuration file for vim only)
 
+set nocompatible                                           " enter in vim mode, not plain vi
+set t_Co=256                                               " force 256 colors on the terminal
 syntax enable                                              " enable syntax highlighting
-
-set nocompatible
-filetype off
 
 highlight ColorColumn ctermbg=3 guibg=gray
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -33,7 +32,6 @@ set wildignore=*.o,*~,*.pyc                                " ignore compiled fil
 "set number " show line numbers
 set nowrap " wrap lines
 
-filetype off
 filetype indent plugin on                                  " auto indent
 
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " remove trailing whitespaces
@@ -57,7 +55,7 @@ map <C-t><right> :tabn<cr>
 
 match TrailingWhitespace /\s\+$/
 
-" commenting blocks of code.
+" commenting blocks of code with ,cc ,cu
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
 autocmd FileType sh,ruby,python   let b:comment_leader = '# '
 autocmd FileType conf,fstab       let b:comment_leader = '# '
