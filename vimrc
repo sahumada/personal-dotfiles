@@ -55,6 +55,9 @@ map <C-t><down> :tabl<cr>
 map <C-t><left> :tabp<cr>
 map <C-t><right> :tabn<cr>
 
+" That awful mixed mode with the half-tabs-are-spaces:
+map \M <Esc>:set expandtab tabstop=4 softtabstop=4 shiftwidth=4 retab<cr>
+
 match TrailingWhitespace /\s\+$/
 
 " commenting blocks of code with ,cc ,cu
@@ -64,23 +67,23 @@ autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
-autocmd FileType gitcommit setlocal spell spelllang=en_us textwidth=72 colorcolumn=72
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType gitcommit        setlocal spell spelllang=en_us textwidth=72 colorcolumn=72
+autocmd FileType html             setlocal shiftwidth=2 tabstop=2
 
 " use spaces instead of tabs
 autocmd BufRead,BufNewFile *.c,*.config,.coveragerc,*.css set expandtab
-autocmd BufRead,BufNewFile *.h,*.html set expandtab
-autocmd BufRead,BufNewFile *.inc,*.ini set expandtab
-autocmd BufRead,BufNewFile *.java set expandtab
-autocmd BufRead,BufNewFile *.json set expandtab
+autocmd BufRead,BufNewFile *.h,*.html           set expandtab
+autocmd BufRead,BufNewFile *.inc,*.ini          set expandtab
+autocmd BufRead,BufNewFile *.java               set expandtab
+autocmd BufRead,BufNewFile *.json               set expandtab
 autocmd BufRead,BufNewFile *.php,*.pl,*.pm,*.py set expandtab
-autocmd BufRead,BufNewFile *.sh set expandtab
-autocmd BufRead,BufNewFile *.t set expandtab
-autocmd BufRead,BufNewFile *.xml set expandtab
-autocmd BufRead,BufNewFile *.yaml set expandtab
-autocmd BufRead,BufNewFile COMMIT_EDITMSG set expandtab
+autocmd BufRead,BufNewFile *.sh                 set expandtab
+autocmd BufRead,BufNewFile *.t                  set expandtab
+autocmd BufRead,BufNewFile *.xml                set expandtab
+autocmd BufRead,BufNewFile *.yaml               set expandtab
+autocmd BufRead,BufNewFile COMMIT_EDITMSG       set expandtab
 
-autocmd BufRead,BufNewFile *.py setlocal spell spelllang=en_us
+"autocmd BufRead,BufNewFile *.py setlocal spell spelllang=en_us
 "autocmd FileType tex setlocal spell spelllang=en_us
 "autocmd BufRead,BufNewFile *.tex setlocal spell spelllang=es
 
@@ -94,4 +97,7 @@ autocmd InsertLeave * highlight CursorLine ctermfg=NONE ctermbg=NONE
 set cursorcolumn
 autocmd InsertEnter * highlight CursorColumn ctermfg=white ctermbg=3
 autocmd InsertLeave * highlight CursorColumn ctermfg=NONE ctermbg=NONE
+
+" ALE
+let g:ale_lint_on_enter = 0
 " ~/.vimrc ends here
