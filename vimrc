@@ -11,6 +11,9 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 highlight StatusLine ctermfg=15 ctermbg=4 cterm=bold
 highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 
+" powerline config on MacOS
+set rtp+=/opt/brew/lib/python3.8/site-packages/powerline/bindings/vim
+
 set autoread                                               " set to auto read when a file is changed from the outside
 set background=dark                                        " use the right colors
 set backspace=indent,eol,start                             " sane backspace
@@ -74,8 +77,8 @@ autocmd FileType html             setlocal shiftwidth=2 tabstop=2
 autocmd BufRead,BufNewFile *.c,*.config,.coveragerc,*.css set expandtab
 autocmd BufRead,BufNewFile *.h,*.html           set expandtab
 autocmd BufRead,BufNewFile *.inc,*.ini          set expandtab
-autocmd BufRead,BufNewFile *.java               set expandtab
-autocmd BufRead,BufNewFile *.json               set expandtab
+autocmd BufRead,BufNewFile *.groovy             set expandtab
+autocmd BufRead,BufNewFile *.java,*.json        set expandtab
 autocmd BufRead,BufNewFile *.php,*.pl,*.pm,*.py set expandtab
 autocmd BufRead,BufNewFile *.sh                 set expandtab
 autocmd BufRead,BufNewFile *.t                  set expandtab
