@@ -13,6 +13,8 @@ highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 
 " powerline config on MacOS
 set rtp+=/opt/brew/lib/python3.8/site-packages/powerline/bindings/vim
+" powerline config on Ubuntu 20.04
+set rtp+=/usr/share/vim/addons/
 
 set autoread                                               " set to auto read when a file is changed from the outside
 set background=dark                                        " use the right colors
@@ -29,7 +31,7 @@ set pastetoggle=<F2>                                       " toggle auto-indenti
 set ruler                                                  " always show current position
 set tabstop=4 textwidth=100 shiftwidth=4                   " 1 tab == 4 spaces
 set smarttab                                               " be smart when using tabs ;)
-set statusline=\ %r%{getcwd()}%h\/%f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l/%L][%v][%p%%]\ %)
+"set statusline=\ %r%{getcwd()}%h\/%f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l/%L][%v][%p%%]\ %)
 set wildmenu                                               " turn on the WiLd menu
 set wildignore=*.o,*~,*.pyc                                " ignore compiled files
 "set ai " auto indent
