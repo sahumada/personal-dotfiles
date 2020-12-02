@@ -12,7 +12,7 @@ highlight StatusLine ctermfg=15 ctermbg=4 cterm=bold
 highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 
 " powerline config on MacOS
-set rtp+=/opt/brew/lib/python3.8/site-packages/powerline/bindings/vim
+set rtp+=/usr/local/lib/python3.8/site-packages/powerline/bindings/vim
 " powerline config on Ubuntu 20.04
 set rtp+=/usr/share/vim/addons/
 
