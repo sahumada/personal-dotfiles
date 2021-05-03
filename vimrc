@@ -79,6 +79,7 @@ autocmd FileType gitcommit        setlocal spell spelllang=en_us textwidth=72 co
 autocmd FileType html             setlocal shiftwidth=2 tabstop=2
 
 " use spaces instead of tabs
+autocmd BufRead,BufNewFile *.bib                set expandtab
 autocmd BufRead,BufNewFile *.c,*.config,.coveragerc,*.css set expandtab
 autocmd BufRead,BufNewFile *.h,*.html           set expandtab
 autocmd BufRead,BufNewFile *.inc,*.ini          set expandtab
@@ -86,7 +87,7 @@ autocmd BufRead,BufNewFile *.groovy             set expandtab
 autocmd BufRead,BufNewFile *.java,*.json        set expandtab
 autocmd BufRead,BufNewFile *.php,*.pl,*.pm,*.py set expandtab
 autocmd BufRead,BufNewFile *.sh                 set expandtab
-autocmd BufRead,BufNewFile *.t                  set expandtab
+autocmd BufRead,BufNewFile *.t,*.tex            set expandtab
 autocmd BufRead,BufNewFile *.xml                set expandtab
 autocmd BufRead,BufNewFile *.yaml               set expandtab
 autocmd BufRead,BufNewFile COMMIT_EDITMSG       set expandtab
