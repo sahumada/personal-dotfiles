@@ -12,7 +12,7 @@ highlight StatusLine ctermfg=15 ctermbg=4 cterm=bold
 highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 
 " powerline config on MacOS
-set rtp+=/usr/local/lib/python3.8/site-packages/powerline/bindings/vim
+set rtp+=/usr/local/lib/python3.9/site-packages/powerline/bindings/vim
 " powerline config on Ubuntu 20.04
 set rtp+=/usr/share/vim/addons/
 
@@ -62,6 +62,9 @@ map <C-t><right> :tabn<cr>
 
 " That awful mixed mode with the half-tabs-are-spaces:
 map \M <Esc>:set expandtab tabstop=4 softtabstop=4 shiftwidth=4 retab<cr>
+
+" add copyright headers
+autocmd BufNewFile *.py :0r ~/.vim/copyright/python.txt
 
 match TrailingWhitespace /\s\+$/
 

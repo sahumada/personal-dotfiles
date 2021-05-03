@@ -25,13 +25,17 @@ if [ -d "/opt/brew/bin" ]; then
 fi
 export PATH="~/bin:$PATH"
 
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 # Powerline
 if [ -f `which powerline-daemon` ]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
   POWERLINE_BASH_SELECT=1
-  source /usr/local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
+  source /usr/local/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 fi
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
