@@ -1,7 +1,7 @@
 # aliases
 alias ll='ls -l'
-alias vi='mvim -v'
-alias vim='mvim -v'
+alias vi='mvim -vb'
+alias vim='mvim -vb'
 
 # locale
 export LC_ALL=en_US.UTF-8
