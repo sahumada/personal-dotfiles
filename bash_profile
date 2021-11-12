@@ -7,6 +7,9 @@ alias vim='mvim -vb'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UFT-8
 
+# less
+export LESS='-i'
+
 ## Java 11
 # For the system Java wrappers to find this JDK, symlink it with
 # sudo ln -sfn /opt/brew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
