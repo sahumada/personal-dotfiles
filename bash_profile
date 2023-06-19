@@ -1,4 +1,5 @@
 # aliases
+alias diff='colordiff'
 alias ll='ls -l'
 alias vi='mvim -vb'
 alias vim='mvim -vb'
@@ -20,6 +21,15 @@ export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
 
 #For compilers to find openjdk@11 you may need to set:
 export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+eval "$(pyenv init --path)"
+#eval "$(pyenv virtualenv-init -)"
 
 # PATH
 export PATH="/usr/local/sbin:$PATH"
@@ -27,11 +37,6 @@ if [ -d "/opt/brew/bin" ]; then
     PATH="/opt/brew/bin:$PATH"
 fi
 export PATH="~/bin:$PATH"
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 
 # Powerline
 if [ -f `which powerline-daemon` ]; then
