@@ -39,6 +39,7 @@
 [user]
     name = Sergio Ahumada
     email = sahumada@texla.cl
+    signingkey = sahumada@texla.cl
 [http]
     sslverify = false
 [push]
@@ -57,3 +58,9 @@
     prompt = false
 [mergetool]
     prompt = false
+[init]
+    defaultBranch = development
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
