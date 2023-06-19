@@ -12,9 +12,18 @@ highlight StatusLine ctermfg=15 ctermbg=4 cterm=bold
 highlight TrailingWhitespace ctermbg=darkgreen guibg=darkgreen
 
 " powerline config on MacOS
-set rtp+=/usr/local/lib/python3.9/site-packages/powerline/bindings/vim
+"set rtp+=/usr/local/lib/python3.9/site-packages/powerline/bindings/vim
 " powerline config on Ubuntu 20.04
-set rtp+=/usr/share/vim/addons/
+"set rtp+=/usr/share/vim/addons/
+
+" plugins
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+
+" vim-airline
+let g:airline_powerline_fonts = 1
 
 set autoread                                               " set to auto read when a file is changed from the outside
 set background=dark                                        " use the right colors
