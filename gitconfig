@@ -51,9 +51,9 @@
 [status]
     showuntrackedfiles = all
 [merge]
-    tool = meld
+    tool = vimdiff
 [diff]
-    tool = meld
+    tool = vimdiff
 [difftool]
     prompt = false
 [mergetool]
@@ -61,6 +61,6 @@
 [init]
     defaultBranch = development
 [commit]
-    gpgsign = true
+    gpgsign = false
 [tag]
     gpgsign = true
